@@ -1,0 +1,58 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.ALL ;
+USE ieee.std_logic_arith.ALL;
+USE ieee.std_logic_signed.ALL;
+USE ieee.numeric_std.ALL; 
+ENTITY sender IS
+PORT ( 
+ input : IN STD_LOGIC_VECTOR(7 DOWNTO 0) ;
+ t : IN STD_LOGIC;
+ data : OUT STD_LOGIC;
+ clock : IN STD_LOGIC );
+END sender ;
+
+ARCHITECTURE behaviour OF sender IS
+SHARED VARIABLE hamout : STD_LOGIC_VECTOR(11 DOWNTO 0);
+
+BEGIN
+	Hamming_process : process IS
+	VARIABLE p0, p1, p3, p7 : STD_LOGIC; --check bits
+	BEGIN
+	
+		WAIT UNTIL t='1';
+		p0 := ((input(0) XOR input(1)) XOR input(3)) XOR input(6);
+		p1 := (((input(0) XOR input(2)) XOR input(3)) XOR input(5)) XOR input(6);
+		p3 := ((input(1) XOR input(2)) XOR input(3)) XOR input(7);
+		p7 := ((input(4) XOR input(5)) XOR input(6)) XOR input(7);
+		
+		--connect up outputs
+		hamout(0 DOWNTO 1) := (p0, p1);
+		hamout(2) := (input(0));
+		hamout(3) := (p3);
+		hamout(6 DOWNTO 4) := (input(3 DOWNTO 1));
+		hamout(7) := (p7);
+		hamout(11 DOWNTO 8) := input(7 DOWNTO 4);	
+		
+		--FOR i IN 0 TO (hamout'length)-1 LOOP
+			
+		--	data <= hamout(i);
+		--	transmition_clock <= '1';
+			--WAIT FOR 10 ns;
+		--	transmition_clock <= '0';
+		--END LOOP;
+		
+	END process Hamming_process;
+	
+	send_process : process IS
+	VARIABLE counter : STD_LOGIC_VECTOR(3 DOWNTO 0) ;
+	CONSTANT zero : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
+	BEGIN
+		counter := zero;
+		WAIT UNTIL clock = '1';
+		counter := (counter+1);
+		IF (counter < 12) THEN
+			data <= hamout(conv_integer(counter));
+		END IF;
+	END process send_process;
+
+END behaviour ;

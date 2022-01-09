@@ -1,0 +1,25 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_signed.all;
+ENTITY receiver IS
+PORT ( 
+ output : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) ;
+ r : OUT STD_LOGIC;
+ data : IN STD_LOGIC;
+ clock : IN STD_LOGIC) ;
+END receiver ;
+
+
+
+ARCHITECTURE behaviour OF receiver IS
+BEGIN
+ Hamming_process : process IS
+	VARIABLE counter : STD_LOGIC_VECTOR(3 DOWNTO 0) ;
+	CONSTANT zero : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
+	BEGIN
+		counter := zero;
+		WAIT UNTIL clock='1';
+		counter := (counter+1);
+	END process Hamming_process;
+END behaviour ;

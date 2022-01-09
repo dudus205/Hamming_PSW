@@ -1,0 +1,217 @@
+$comment
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+$end
+
+$date 
+  01/09/2022 13:01:11 
+$end
+$version 
+ QUARTUS_VCD_EXPORT 1.0 
+$end
+$timescale
+  1 ps
+$end
+$scope module Hamming $end
+$var reg 1 ! Clock $end
+$var reg 8 " input[7:0] $end
+$var reg 8 # output[7:0] $end
+$var reg 1 $ reset $end
+$var reg 4 % ReverseBitIndex[3:0] $end
+$var reg 1 & ready $end
+$var reg 1 ' sent $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b10101010 "
+b0 #
+0$
+b10 %
+0&
+0'
+$end
+#25000
+1!
+#50000
+0!
+#75000
+1!
+#100000
+0!
+#125000
+1!
+#150000
+0!
+#175000
+1!
+#200000
+0!
+#225000
+1!
+#250000
+0!
+#275000
+1!
+#300000
+0!
+#325000
+1!
+#350000
+0!
+#375000
+1!
+#400000
+0!
+#425000
+1!
+#450000
+0!
+#475000
+1!
+#500000
+0!
+#525000
+1!
+#550000
+0!
+#575000
+1!
+#600000
+0!
+#625000
+1!
+1'
+#650000
+0!
+1&
+#675000
+1!
+0'
+#700000
+0!
+0&
+#725000
+1!
+#750000
+0!
+#775000
+1!
+#800000
+0!
+#810000
+1$
+#825000
+1!
+#850000
+0!
+#875000
+1!
+#900000
+0!
+#925000
+1!
+#950000
+0!
+#960000
+0$
+#975000
+1!
+#1000000
+0!
+#1025000
+1!
+#1050000
+0!
+#1075000
+1!
+#1100000
+0!
+#1125000
+1!
+#1150000
+0!
+#1175000
+1!
+#1200000
+0!
+#1225000
+1!
+#1250000
+0!
+#1275000
+1!
+#1300000
+0!
+#1325000
+1!
+#1350000
+0!
+#1375000
+1!
+#1400000
+0!
+#1425000
+1!
+#1450000
+0!
+#1475000
+1!
+#1500000
+0!
+#1525000
+1!
+#1550000
+0!
+#1575000
+1!
+1'
+#1600000
+0!
+b10101010 #
+1&
+#1625000
+1!
+0'
+#1650000
+0!
+0&
+#1675000
+1!
+#1700000
+0!
+#1725000
+1!
+#1750000
+0!
+#1775000
+1!
+#1800000
+0!
+#1825000
+1!
+#1850000
+0!
+#1875000
+1!
+#1900000
+0!
+#1925000
+1!
+#1950000
+0!
+#1975000
+1!
+#2000000

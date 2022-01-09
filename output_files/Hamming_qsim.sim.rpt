@@ -1,0 +1,876 @@
+Simulator report for Hamming_qsim
+Mon Jun 14 18:11:32 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 2.0 us       ;
+; Simulation Netlist Size     ; 571 nodes    ;
+; Simulation Coverage         ;      70.23 % ;
+; Total Number of Transitions ; 6217         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                       ;
++--------------------------------------------------------------------------------------------+-----------------------------+---------------+
+; Option                                                                                     ; Setting                     ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------+---------------+
+; Simulation mode                                                                            ; Functional                  ; Timing        ;
+; Start time                                                                                 ; 0 ns                        ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                         ;               ;
+; Vector input source                                                                        ; D:/altera/PSW2/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                          ; On            ;
+; Check outputs                                                                              ; Off                         ; Off           ;
+; Report simulation coverage                                                                 ; On                          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                          ; On            ;
+; Display missing 1-value coverage report                                                    ; On                          ; On            ;
+; Display missing 0-value coverage report                                                    ; On                          ; On            ;
+; Detect setup and hold time violations                                                      ; Off                         ; Off           ;
+; Detect glitches                                                                            ; Off                         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                         ; Off           ;
+; Generate Signal Activity File                                                              ; Off                         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                        ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                   ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                   ; Transport     ;
++--------------------------------------------------------------------------------------------+-----------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      70.23 % ;
+; Total nodes checked                                 ; 571          ;
+; Total output ports checked                          ; 571          ;
+; Total output ports with complete 1/0-value coverage ; 401          ;
+; Total output ports with no 1/0-value coverage       ; 136          ;
+; Total output ports with no 1-value coverage         ; 136          ;
+; Total output ports with no 0-value coverage         ; 170          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                  ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+
+; Node Name                                                                   ; Output Port Name                                                            ; Output Port Type ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+
+; |Hamming|sent                                                               ; |Hamming|sent                                                               ; pin_out          ;
+; |Hamming|reset                                                              ; |Hamming|reset                                                              ; out              ;
+; |Hamming|Clock                                                              ; |Hamming|Clock                                                              ; out              ;
+; |Hamming|ready                                                              ; |Hamming|ready                                                              ; pin_out          ;
+; |Hamming|interupter:inst2|\interruptProcess:counter[2]                      ; |Hamming|interupter:inst2|\interruptProcess:counter[2]                      ; regout           ;
+; |Hamming|interupter:inst2|\interruptProcess:counter[1]                      ; |Hamming|interupter:inst2|\interruptProcess:counter[1]                      ; regout           ;
+; |Hamming|interupter:inst2|dataOut                                           ; |Hamming|interupter:inst2|dataOut                                           ; out0             ;
+; |Hamming|interupter:inst2|\interruptProcess:counter[0]                      ; |Hamming|interupter:inst2|\interruptProcess:counter[0]                      ; regout           ;
+; |Hamming|interupter:inst2|counter~0                                         ; |Hamming|interupter:inst2|counter~0                                         ; out              ;
+; |Hamming|interupter:inst2|counter~1                                         ; |Hamming|interupter:inst2|counter~1                                         ; out              ;
+; |Hamming|interupter:inst2|counter~2                                         ; |Hamming|interupter:inst2|counter~2                                         ; out              ;
+; |Hamming|interupter:inst2|counter~3                                         ; |Hamming|interupter:inst2|counter~3                                         ; out              ;
+; |Hamming|interupter:inst2|act                                               ; |Hamming|interupter:inst2|act                                               ; regout           ;
+; |Hamming|interupter:inst2|counter~4                                         ; |Hamming|interupter:inst2|counter~4                                         ; out              ;
+; |Hamming|interupter:inst2|counter~5                                         ; |Hamming|interupter:inst2|counter~5                                         ; out              ;
+; |Hamming|interupter:inst2|counter~6                                         ; |Hamming|interupter:inst2|counter~6                                         ; out              ;
+; |Hamming|interupter:inst2|counter~7                                         ; |Hamming|interupter:inst2|counter~7                                         ; out              ;
+; |Hamming|interupter:inst2|\interruptProcess:counter[3]                      ; |Hamming|interupter:inst2|\interruptProcess:counter[3]                      ; regout           ;
+; |Hamming|receiver:inst|pairity~0                                            ; |Hamming|receiver:inst|pairity~0                                            ; out              ;
+; |Hamming|receiver:inst|pairity~1                                            ; |Hamming|receiver:inst|pairity~1                                            ; out              ;
+; |Hamming|receiver:inst|pairity~2                                            ; |Hamming|receiver:inst|pairity~2                                            ; out              ;
+; |Hamming|receiver:inst|pairity~3                                            ; |Hamming|receiver:inst|pairity~3                                            ; out              ;
+; |Hamming|receiver:inst|pairity~5                                            ; |Hamming|receiver:inst|pairity~5                                            ; out              ;
+; |Hamming|receiver:inst|pairity~6                                            ; |Hamming|receiver:inst|pairity~6                                            ; out              ;
+; |Hamming|receiver:inst|pairity~7                                            ; |Hamming|receiver:inst|pairity~7                                            ; out              ;
+; |Hamming|receiver:inst|pairity~8                                            ; |Hamming|receiver:inst|pairity~8                                            ; out              ;
+; |Hamming|receiver:inst|pairity~9                                            ; |Hamming|receiver:inst|pairity~9                                            ; out              ;
+; |Hamming|receiver:inst|pairity~10                                           ; |Hamming|receiver:inst|pairity~10                                           ; out              ;
+; |Hamming|receiver:inst|pairity~11                                           ; |Hamming|receiver:inst|pairity~11                                           ; out              ;
+; |Hamming|receiver:inst|pairity~14                                           ; |Hamming|receiver:inst|pairity~14                                           ; out              ;
+; |Hamming|receiver:inst|pairity~16                                           ; |Hamming|receiver:inst|pairity~16                                           ; out              ;
+; |Hamming|receiver:inst|pairity~18                                           ; |Hamming|receiver:inst|pairity~18                                           ; out              ;
+; |Hamming|receiver:inst|pairity~19                                           ; |Hamming|receiver:inst|pairity~19                                           ; out              ;
+; |Hamming|receiver:inst|pairity~20                                           ; |Hamming|receiver:inst|pairity~20                                           ; out              ;
+; |Hamming|receiver:inst|pairity~21                                           ; |Hamming|receiver:inst|pairity~21                                           ; out              ;
+; |Hamming|receiver:inst|hamin~1                                              ; |Hamming|receiver:inst|hamin~1                                              ; out              ;
+; |Hamming|receiver:inst|hamin~4                                              ; |Hamming|receiver:inst|hamin~4                                              ; out              ;
+; |Hamming|receiver:inst|hamin~5                                              ; |Hamming|receiver:inst|hamin~5                                              ; out              ;
+; |Hamming|receiver:inst|hamin~7                                              ; |Hamming|receiver:inst|hamin~7                                              ; out              ;
+; |Hamming|receiver:inst|hamin~8                                              ; |Hamming|receiver:inst|hamin~8                                              ; out              ;
+; |Hamming|receiver:inst|hamin~9                                              ; |Hamming|receiver:inst|hamin~9                                              ; out              ;
+; |Hamming|receiver:inst|hamin~10                                             ; |Hamming|receiver:inst|hamin~10                                             ; out              ;
+; |Hamming|receiver:inst|hamin~13                                             ; |Hamming|receiver:inst|hamin~13                                             ; out              ;
+; |Hamming|receiver:inst|hamin~17                                             ; |Hamming|receiver:inst|hamin~17                                             ; out              ;
+; |Hamming|receiver:inst|hamin~19                                             ; |Hamming|receiver:inst|hamin~19                                             ; out              ;
+; |Hamming|receiver:inst|hamin~21                                             ; |Hamming|receiver:inst|hamin~21                                             ; out              ;
+; |Hamming|receiver:inst|hamin~22                                             ; |Hamming|receiver:inst|hamin~22                                             ; out              ;
+; |Hamming|receiver:inst|hamin~25                                             ; |Hamming|receiver:inst|hamin~25                                             ; out              ;
+; |Hamming|receiver:inst|hamin~27                                             ; |Hamming|receiver:inst|hamin~27                                             ; out              ;
+; |Hamming|receiver:inst|hamin~28                                             ; |Hamming|receiver:inst|hamin~28                                             ; out              ;
+; |Hamming|receiver:inst|hamin~29                                             ; |Hamming|receiver:inst|hamin~29                                             ; out              ;
+; |Hamming|receiver:inst|hamin~30                                             ; |Hamming|receiver:inst|hamin~30                                             ; out              ;
+; |Hamming|receiver:inst|hamin~31                                             ; |Hamming|receiver:inst|hamin~31                                             ; out              ;
+; |Hamming|receiver:inst|hamin~32                                             ; |Hamming|receiver:inst|hamin~32                                             ; out              ;
+; |Hamming|receiver:inst|hamin~33                                             ; |Hamming|receiver:inst|hamin~33                                             ; out              ;
+; |Hamming|receiver:inst|hamin~35                                             ; |Hamming|receiver:inst|hamin~35                                             ; out              ;
+; |Hamming|receiver:inst|counter~0                                            ; |Hamming|receiver:inst|counter~0                                            ; out              ;
+; |Hamming|receiver:inst|counter~1                                            ; |Hamming|receiver:inst|counter~1                                            ; out              ;
+; |Hamming|receiver:inst|counter~2                                            ; |Hamming|receiver:inst|counter~2                                            ; out              ;
+; |Hamming|receiver:inst|counter~3                                            ; |Hamming|receiver:inst|counter~3                                            ; out              ;
+; |Hamming|receiver:inst|pairity~24                                           ; |Hamming|receiver:inst|pairity~24                                           ; out              ;
+; |Hamming|receiver:inst|pairity~25                                           ; |Hamming|receiver:inst|pairity~25                                           ; out              ;
+; |Hamming|receiver:inst|hamin~37                                             ; |Hamming|receiver:inst|hamin~37                                             ; out              ;
+; |Hamming|receiver:inst|hamin~39                                             ; |Hamming|receiver:inst|hamin~39                                             ; out              ;
+; |Hamming|receiver:inst|hamin~40                                             ; |Hamming|receiver:inst|hamin~40                                             ; out              ;
+; |Hamming|receiver:inst|hamin~41                                             ; |Hamming|receiver:inst|hamin~41                                             ; out              ;
+; |Hamming|receiver:inst|hamin~42                                             ; |Hamming|receiver:inst|hamin~42                                             ; out              ;
+; |Hamming|receiver:inst|hamin~43                                             ; |Hamming|receiver:inst|hamin~43                                             ; out              ;
+; |Hamming|receiver:inst|hamin~44                                             ; |Hamming|receiver:inst|hamin~44                                             ; out              ;
+; |Hamming|receiver:inst|hamin~45                                             ; |Hamming|receiver:inst|hamin~45                                             ; out              ;
+; |Hamming|receiver:inst|hamin~47                                             ; |Hamming|receiver:inst|hamin~47                                             ; out              ;
+; |Hamming|receiver:inst|output~7                                             ; |Hamming|receiver:inst|output~7                                             ; out              ;
+; |Hamming|receiver:inst|counter~4                                            ; |Hamming|receiver:inst|counter~4                                            ; out              ;
+; |Hamming|receiver:inst|counter~5                                            ; |Hamming|receiver:inst|counter~5                                            ; out              ;
+; |Hamming|receiver:inst|counter~6                                            ; |Hamming|receiver:inst|counter~6                                            ; out              ;
+; |Hamming|receiver:inst|counter~7                                            ; |Hamming|receiver:inst|counter~7                                            ; out              ;
+; |Hamming|receiver:inst|\receiving_process:hamin[2]                          ; |Hamming|receiver:inst|\receiving_process:hamin[2]                          ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:pairity[0]                        ; |Hamming|receiver:inst|\receiving_process:pairity[0]                        ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:pairity[1]                        ; |Hamming|receiver:inst|\receiving_process:pairity[1]                        ; regout           ;
+; |Hamming|receiver:inst|ready                                                ; |Hamming|receiver:inst|ready                                                ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:counter[0]                        ; |Hamming|receiver:inst|\receiving_process:counter[0]                        ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:counter[1]                        ; |Hamming|receiver:inst|\receiving_process:counter[1]                        ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:counter[2]                        ; |Hamming|receiver:inst|\receiving_process:counter[2]                        ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:counter[3]                        ; |Hamming|receiver:inst|\receiving_process:counter[3]                        ; regout           ;
+; |Hamming|sender:inst1|sent                                                  ; |Hamming|sender:inst1|sent                                                  ; regout           ;
+; |Hamming|sender:inst1|data                                                  ; |Hamming|sender:inst1|data                                                  ; regout           ;
+; |Hamming|sender:inst1|counter~0                                             ; |Hamming|sender:inst1|counter~0                                             ; out              ;
+; |Hamming|sender:inst1|counter~1                                             ; |Hamming|sender:inst1|counter~1                                             ; out              ;
+; |Hamming|sender:inst1|counter~2                                             ; |Hamming|sender:inst1|counter~2                                             ; out              ;
+; |Hamming|sender:inst1|counter~3                                             ; |Hamming|sender:inst1|counter~3                                             ; out              ;
+; |Hamming|sender:inst1|data~0                                                ; |Hamming|sender:inst1|data~0                                                ; out              ;
+; |Hamming|sender:inst1|counter~4                                             ; |Hamming|sender:inst1|counter~4                                             ; out              ;
+; |Hamming|sender:inst1|counter~5                                             ; |Hamming|sender:inst1|counter~5                                             ; out              ;
+; |Hamming|sender:inst1|counter~6                                             ; |Hamming|sender:inst1|counter~6                                             ; out              ;
+; |Hamming|sender:inst1|counter~7                                             ; |Hamming|sender:inst1|counter~7                                             ; out              ;
+; |Hamming|sender:inst1|sent~0                                                ; |Hamming|sender:inst1|sent~0                                                ; out              ;
+; |Hamming|sender:inst1|data~1                                                ; |Hamming|sender:inst1|data~1                                                ; out              ;
+; |Hamming|sender:inst1|counter~8                                             ; |Hamming|sender:inst1|counter~8                                             ; out              ;
+; |Hamming|sender:inst1|counter~9                                             ; |Hamming|sender:inst1|counter~9                                             ; out              ;
+; |Hamming|sender:inst1|counter~10                                            ; |Hamming|sender:inst1|counter~10                                            ; out              ;
+; |Hamming|sender:inst1|counter~11                                            ; |Hamming|sender:inst1|counter~11                                            ; out              ;
+; |Hamming|sender:inst1|\send_process:counter[0]                              ; |Hamming|sender:inst1|\send_process:counter[0]                              ; regout           ;
+; |Hamming|sender:inst1|\send_process:counter[1]                              ; |Hamming|sender:inst1|\send_process:counter[1]                              ; regout           ;
+; |Hamming|sender:inst1|\send_process:counter[2]                              ; |Hamming|sender:inst1|\send_process:counter[2]                              ; regout           ;
+; |Hamming|sender:inst1|\send_process:counter[3]                              ; |Hamming|sender:inst1|\send_process:counter[3]                              ; regout           ;
+; |Hamming|receiver:inst|Decoder0~1                                           ; |Hamming|receiver:inst|Decoder0~1                                           ; out              ;
+; |Hamming|receiver:inst|Decoder0~2                                           ; |Hamming|receiver:inst|Decoder0~2                                           ; out              ;
+; |Hamming|receiver:inst|Decoder0~3                                           ; |Hamming|receiver:inst|Decoder0~3                                           ; out              ;
+; |Hamming|receiver:inst|Decoder0~4                                           ; |Hamming|receiver:inst|Decoder0~4                                           ; out              ;
+; |Hamming|receiver:inst|Decoder0~6                                           ; |Hamming|receiver:inst|Decoder0~6                                           ; out              ;
+; |Hamming|receiver:inst|Decoder0~7                                           ; |Hamming|receiver:inst|Decoder0~7                                           ; out              ;
+; |Hamming|receiver:inst|Decoder0~10                                          ; |Hamming|receiver:inst|Decoder0~10                                          ; out              ;
+; |Hamming|receiver:inst|Decoder1~0                                           ; |Hamming|receiver:inst|Decoder1~0                                           ; out              ;
+; |Hamming|receiver:inst|Decoder1~1                                           ; |Hamming|receiver:inst|Decoder1~1                                           ; out              ;
+; |Hamming|receiver:inst|Decoder1~2                                           ; |Hamming|receiver:inst|Decoder1~2                                           ; out              ;
+; |Hamming|receiver:inst|Decoder1~3                                           ; |Hamming|receiver:inst|Decoder1~3                                           ; out              ;
+; |Hamming|receiver:inst|Decoder1~4                                           ; |Hamming|receiver:inst|Decoder1~4                                           ; out              ;
+; |Hamming|receiver:inst|Decoder1~5                                           ; |Hamming|receiver:inst|Decoder1~5                                           ; out              ;
+; |Hamming|receiver:inst|Decoder1~6                                           ; |Hamming|receiver:inst|Decoder1~6                                           ; out              ;
+; |Hamming|receiver:inst|Decoder1~7                                           ; |Hamming|receiver:inst|Decoder1~7                                           ; out              ;
+; |Hamming|receiver:inst|Decoder1~8                                           ; |Hamming|receiver:inst|Decoder1~8                                           ; out              ;
+; |Hamming|receiver:inst|Decoder1~9                                           ; |Hamming|receiver:inst|Decoder1~9                                           ; out              ;
+; |Hamming|receiver:inst|Decoder1~10                                          ; |Hamming|receiver:inst|Decoder1~10                                          ; out              ;
+; |Hamming|receiver:inst|Decoder1~11                                          ; |Hamming|receiver:inst|Decoder1~11                                          ; out              ;
+; |Hamming|interupter:inst2|Add0~0                                            ; |Hamming|interupter:inst2|Add0~0                                            ; out0             ;
+; |Hamming|interupter:inst2|Add0~1                                            ; |Hamming|interupter:inst2|Add0~1                                            ; out0             ;
+; |Hamming|interupter:inst2|Add0~2                                            ; |Hamming|interupter:inst2|Add0~2                                            ; out0             ;
+; |Hamming|interupter:inst2|Add0~3                                            ; |Hamming|interupter:inst2|Add0~3                                            ; out0             ;
+; |Hamming|interupter:inst2|Add0~4                                            ; |Hamming|interupter:inst2|Add0~4                                            ; out0             ;
+; |Hamming|receiver:inst|Add0~0                                               ; |Hamming|receiver:inst|Add0~0                                               ; out0             ;
+; |Hamming|receiver:inst|Add0~1                                               ; |Hamming|receiver:inst|Add0~1                                               ; out0             ;
+; |Hamming|receiver:inst|Add0~2                                               ; |Hamming|receiver:inst|Add0~2                                               ; out0             ;
+; |Hamming|receiver:inst|Add0~3                                               ; |Hamming|receiver:inst|Add0~3                                               ; out0             ;
+; |Hamming|receiver:inst|Add0~4                                               ; |Hamming|receiver:inst|Add0~4                                               ; out0             ;
+; |Hamming|receiver:inst|Add1~0                                               ; |Hamming|receiver:inst|Add1~0                                               ; out0             ;
+; |Hamming|receiver:inst|Add1~1                                               ; |Hamming|receiver:inst|Add1~1                                               ; out0             ;
+; |Hamming|receiver:inst|Add1~2                                               ; |Hamming|receiver:inst|Add1~2                                               ; out0             ;
+; |Hamming|receiver:inst|Add1~3                                               ; |Hamming|receiver:inst|Add1~3                                               ; out0             ;
+; |Hamming|receiver:inst|Add1~4                                               ; |Hamming|receiver:inst|Add1~4                                               ; out0             ;
+; |Hamming|receiver:inst|Add1~5                                               ; |Hamming|receiver:inst|Add1~5                                               ; out0             ;
+; |Hamming|receiver:inst|Add1~6                                               ; |Hamming|receiver:inst|Add1~6                                               ; out0             ;
+; |Hamming|receiver:inst|Add2~0                                               ; |Hamming|receiver:inst|Add2~0                                               ; out0             ;
+; |Hamming|receiver:inst|Add2~1                                               ; |Hamming|receiver:inst|Add2~1                                               ; out0             ;
+; |Hamming|receiver:inst|Add2~2                                               ; |Hamming|receiver:inst|Add2~2                                               ; out0             ;
+; |Hamming|receiver:inst|Add2~3                                               ; |Hamming|receiver:inst|Add2~3                                               ; out0             ;
+; |Hamming|receiver:inst|Add2~4                                               ; |Hamming|receiver:inst|Add2~4                                               ; out0             ;
+; |Hamming|receiver:inst|Add2~5                                               ; |Hamming|receiver:inst|Add2~5                                               ; out0             ;
+; |Hamming|receiver:inst|Add2~6                                               ; |Hamming|receiver:inst|Add2~6                                               ; out0             ;
+; |Hamming|sender:inst1|Add0~0                                                ; |Hamming|sender:inst1|Add0~0                                                ; out0             ;
+; |Hamming|sender:inst1|Add0~1                                                ; |Hamming|sender:inst1|Add0~1                                                ; out0             ;
+; |Hamming|sender:inst1|Add0~2                                                ; |Hamming|sender:inst1|Add0~2                                                ; out0             ;
+; |Hamming|sender:inst1|Add0~3                                                ; |Hamming|sender:inst1|Add0~3                                                ; out0             ;
+; |Hamming|sender:inst1|Add0~4                                                ; |Hamming|sender:inst1|Add0~4                                                ; out0             ;
+; |Hamming|sender:inst1|Add1~0                                                ; |Hamming|sender:inst1|Add1~0                                                ; out0             ;
+; |Hamming|sender:inst1|Add1~1                                                ; |Hamming|sender:inst1|Add1~1                                                ; out0             ;
+; |Hamming|sender:inst1|Add1~2                                                ; |Hamming|sender:inst1|Add1~2                                                ; out0             ;
+; |Hamming|sender:inst1|Add1~3                                                ; |Hamming|sender:inst1|Add1~3                                                ; out0             ;
+; |Hamming|sender:inst1|Add1~4                                                ; |Hamming|sender:inst1|Add1~4                                                ; out0             ;
+; |Hamming|sender:inst1|Add1~5                                                ; |Hamming|sender:inst1|Add1~5                                                ; out0             ;
+; |Hamming|sender:inst1|Add1~6                                                ; |Hamming|sender:inst1|Add1~6                                                ; out0             ;
+; |Hamming|interupter:inst2|Equal0~0                                          ; |Hamming|interupter:inst2|Equal0~0                                          ; out0             ;
+; |Hamming|interupter:inst2|Equal1~0                                          ; |Hamming|interupter:inst2|Equal1~0                                          ; out0             ;
+; |Hamming|interupter:inst2|Equal1~1                                          ; |Hamming|interupter:inst2|Equal1~1                                          ; out0             ;
+; |Hamming|interupter:inst2|Equal1~2                                          ; |Hamming|interupter:inst2|Equal1~2                                          ; out0             ;
+; |Hamming|interupter:inst2|Equal1~3                                          ; |Hamming|interupter:inst2|Equal1~3                                          ; out0             ;
+; |Hamming|interupter:inst2|Equal1~4                                          ; |Hamming|interupter:inst2|Equal1~4                                          ; out0             ;
+; |Hamming|receiver:inst|Equal0~0                                             ; |Hamming|receiver:inst|Equal0~0                                             ; out0             ;
+; |Hamming|receiver:inst|Equal1~0                                             ; |Hamming|receiver:inst|Equal1~0                                             ; out0             ;
+; |Hamming|sender:inst1|Equal0~0                                              ; |Hamming|sender:inst1|Equal0~0                                              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~1               ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~1               ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~2               ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~2               ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~3               ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~3               ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~4               ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~4               ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~5               ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~5               ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~6               ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~6               ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~7               ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~7               ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~8               ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~8               ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~10              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~10              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~11              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~11              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~12              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~12              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~13              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~13              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~14              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~14              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~15              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~15              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~16              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~16              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~17              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~17              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~18              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~18              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~19              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~19              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~20              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~20              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~21              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~21              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~23              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~23              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~25              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~25              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~27              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~27              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~28              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~28              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~29              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~29              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~30              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~30              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~32              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~32              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~34              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~34              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~36              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~36              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~37              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~37              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~38              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~38              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~39              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~39              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~40              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~40              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~41              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~41              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~42              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~42              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~43              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~43              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~44              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~44              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~45              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~45              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~46              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~46              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~47              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~47              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~48              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~48              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~50              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~50              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~52              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~52              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~53              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~53              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~54              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~54              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~55              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~55              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~56              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~56              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~57              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~57              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~59              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~59              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~61              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~61              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~62              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~62              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~63              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~63              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~64              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~64              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~65              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~65              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~66              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~66              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~67              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~67              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~68              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~68              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~69              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~69              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~70              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~70              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~71              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~71              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]~0  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]~0  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~73              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~73              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~75              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~75              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~77              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~77              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~78              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~78              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~79              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~79              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~80              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~80              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~82              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~82              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~84              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~84              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~86              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~86              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~87              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~87              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~88              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~88              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~89              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~89              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~90              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~90              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~91              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~91              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~92              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~92              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~93              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~93              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~94              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~94              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~95              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~95              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~96              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~96              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~97              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~97              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~98              ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~98              ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~100             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~100             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~102             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~102             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~103             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~103             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~104             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~104             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~105             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~105             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~106             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~106             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~107             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~107             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~109             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~109             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~111             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~111             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~112             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~112             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~113             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~113             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~114             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~114             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~115             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~115             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~116             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~116             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~117             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~117             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~118             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~118             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~119             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~119             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~120             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~120             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~122             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~122             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~124             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~124             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~126             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~126             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~127             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~127             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~128             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~128             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~129             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~129             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~131             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~131             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~133             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~133             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~135             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~135             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~136             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~136             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~137             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~137             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~138             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~138             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~139             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~139             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~142             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~142             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~143             ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~143             ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]~1  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]~1  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]    ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]    ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~0              ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~0              ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~1              ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~1              ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~3              ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~3              ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~5              ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~5              ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~6              ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~6              ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~7              ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~7              ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~8              ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~8              ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~9              ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~9              ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~10             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~10             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~12             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~12             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~14             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~14             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~15             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~15             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~16             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~16             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~17             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~17             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~18             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~18             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~19             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~19             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~20             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~20             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~21             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~21             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~23             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~23             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~25             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~25             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~27             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~27             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~28             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~28             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~29             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~29             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~30             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~30             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~32             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~32             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~34             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~34             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~36             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~36             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~37             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~37             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~38             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~38             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~39             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~39             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~40             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~40             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~41             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~41             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~42             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~42             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~43             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~43             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~44             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~44             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~45             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~45             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~46             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~46             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~48             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~48             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~49             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~49             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~50             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~50             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~52             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~52             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~53             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~53             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~54             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~54             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~55             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~55             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~57             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~57             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~58             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~58             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~59             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~59             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~61             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~61             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~62             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~62             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~63             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~63             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~64             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~64             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~65             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~65             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~66             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~66             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~67             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~67             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~68             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~68             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~69             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~69             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~70             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~70             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~71             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~71             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]~0 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]~0 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~73             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~73             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~75             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~75             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~77             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~77             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~78             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~78             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~79             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~79             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~80             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~80             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~82             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~82             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~84             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~84             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~86             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~86             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~87             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~87             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~88             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~88             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~89             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~89             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~90             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~90             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~91             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~91             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~92             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~92             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~93             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~93             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~94             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~94             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~95             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~95             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~96             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~96             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~98             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~98             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~99             ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~99             ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~100            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~100            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~102            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~102            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~103            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~103            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~104            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~104            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~105            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~105            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~107            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~107            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~108            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~108            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~109            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~109            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~111            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~111            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~112            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~112            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~113            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~113            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~114            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~114            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~115            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~115            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~116            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~116            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~117            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~117            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~118            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~118            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~119            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~119            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~120            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~120            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~122            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~122            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~124            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~124            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~126            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~126            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~127            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~127            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~128            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~128            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~129            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~129            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~131            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~131            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~133            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~133            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~135            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~135            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~136            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~136            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~137            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~137            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~138            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~138            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~139            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~139            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~142            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~142            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~143            ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~143            ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]~1 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]~1 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]   ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|result_node[0]   ; out0             ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                               ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+; Node Name                                                        ; Output Port Name                                                 ; Output Port Type ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+; |Hamming|input[7]                                                ; |Hamming|input[7]                                                ; out              ;
+; |Hamming|input[6]                                                ; |Hamming|input[6]                                                ; out              ;
+; |Hamming|input[5]                                                ; |Hamming|input[5]                                                ; out              ;
+; |Hamming|input[4]                                                ; |Hamming|input[4]                                                ; out              ;
+; |Hamming|input[3]                                                ; |Hamming|input[3]                                                ; out              ;
+; |Hamming|input[2]                                                ; |Hamming|input[2]                                                ; out              ;
+; |Hamming|input[1]                                                ; |Hamming|input[1]                                                ; out              ;
+; |Hamming|input[0]                                                ; |Hamming|input[0]                                                ; out              ;
+; |Hamming|ReverseBitIndex[3]                                      ; |Hamming|ReverseBitIndex[3]                                      ; out              ;
+; |Hamming|ReverseBitIndex[2]                                      ; |Hamming|ReverseBitIndex[2]                                      ; out              ;
+; |Hamming|ReverseBitIndex[1]                                      ; |Hamming|ReverseBitIndex[1]                                      ; out              ;
+; |Hamming|ReverseBitIndex[0]                                      ; |Hamming|ReverseBitIndex[0]                                      ; out              ;
+; |Hamming|output[6]                                               ; |Hamming|output[6]                                               ; pin_out          ;
+; |Hamming|output[4]                                               ; |Hamming|output[4]                                               ; pin_out          ;
+; |Hamming|output[2]                                               ; |Hamming|output[2]                                               ; pin_out          ;
+; |Hamming|output[0]                                               ; |Hamming|output[0]                                               ; pin_out          ;
+; |Hamming|receiver:inst|pairity~12                                ; |Hamming|receiver:inst|pairity~12                                ; out              ;
+; |Hamming|receiver:inst|pairity~13                                ; |Hamming|receiver:inst|pairity~13                                ; out              ;
+; |Hamming|receiver:inst|output[0]                                 ; |Hamming|receiver:inst|output[0]                                 ; regout           ;
+; |Hamming|receiver:inst|hamin~3                                   ; |Hamming|receiver:inst|hamin~3                                   ; out              ;
+; |Hamming|receiver:inst|hamin~6                                   ; |Hamming|receiver:inst|hamin~6                                   ; out              ;
+; |Hamming|receiver:inst|hamin~11                                  ; |Hamming|receiver:inst|hamin~11                                  ; out              ;
+; |Hamming|receiver:inst|hamin~15                                  ; |Hamming|receiver:inst|hamin~15                                  ; out              ;
+; |Hamming|receiver:inst|hamin~16                                  ; |Hamming|receiver:inst|hamin~16                                  ; out              ;
+; |Hamming|receiver:inst|hamin~18                                  ; |Hamming|receiver:inst|hamin~18                                  ; out              ;
+; |Hamming|receiver:inst|hamin~23                                  ; |Hamming|receiver:inst|hamin~23                                  ; out              ;
+; |Hamming|receiver:inst|hamin~34                                  ; |Hamming|receiver:inst|hamin~34                                  ; out              ;
+; |Hamming|receiver:inst|pairity~22                                ; |Hamming|receiver:inst|pairity~22                                ; out              ;
+; |Hamming|receiver:inst|pairity~23                                ; |Hamming|receiver:inst|pairity~23                                ; out              ;
+; |Hamming|receiver:inst|hamin~46                                  ; |Hamming|receiver:inst|hamin~46                                  ; out              ;
+; |Hamming|receiver:inst|output~1                                  ; |Hamming|receiver:inst|output~1                                  ; out              ;
+; |Hamming|receiver:inst|output~3                                  ; |Hamming|receiver:inst|output~3                                  ; out              ;
+; |Hamming|receiver:inst|output~5                                  ; |Hamming|receiver:inst|output~5                                  ; out              ;
+; |Hamming|receiver:inst|output[2]                                 ; |Hamming|receiver:inst|output[2]                                 ; regout           ;
+; |Hamming|receiver:inst|output[4]                                 ; |Hamming|receiver:inst|output[4]                                 ; regout           ;
+; |Hamming|receiver:inst|output[6]                                 ; |Hamming|receiver:inst|output[6]                                 ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[0]               ; |Hamming|receiver:inst|\receiving_process:hamin[0]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[1]               ; |Hamming|receiver:inst|\receiving_process:hamin[1]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[5]               ; |Hamming|receiver:inst|\receiving_process:hamin[5]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[7]               ; |Hamming|receiver:inst|\receiving_process:hamin[7]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[8]               ; |Hamming|receiver:inst|\receiving_process:hamin[8]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[10]              ; |Hamming|receiver:inst|\receiving_process:hamin[10]              ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:pairity[2]             ; |Hamming|receiver:inst|\receiving_process:pairity[2]             ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:pairity[3]             ; |Hamming|receiver:inst|\receiving_process:pairity[3]             ; regout           ;
+; |Hamming|sender:inst1|p0~0                                       ; |Hamming|sender:inst1|p0~0                                       ; out0             ;
+; |Hamming|sender:inst1|p0~1                                       ; |Hamming|sender:inst1|p0~1                                       ; out0             ;
+; |Hamming|sender:inst1|p0~2                                       ; |Hamming|sender:inst1|p0~2                                       ; out0             ;
+; |Hamming|sender:inst1|p1~0                                       ; |Hamming|sender:inst1|p1~0                                       ; out0             ;
+; |Hamming|sender:inst1|p1~1                                       ; |Hamming|sender:inst1|p1~1                                       ; out0             ;
+; |Hamming|sender:inst1|p1~2                                       ; |Hamming|sender:inst1|p1~2                                       ; out0             ;
+; |Hamming|sender:inst1|p1~3                                       ; |Hamming|sender:inst1|p1~3                                       ; out0             ;
+; |Hamming|sender:inst1|p3~0                                       ; |Hamming|sender:inst1|p3~0                                       ; out0             ;
+; |Hamming|sender:inst1|p3~1                                       ; |Hamming|sender:inst1|p3~1                                       ; out0             ;
+; |Hamming|sender:inst1|p3~2                                       ; |Hamming|sender:inst1|p3~2                                       ; out0             ;
+; |Hamming|sender:inst1|p7~0                                       ; |Hamming|sender:inst1|p7~0                                       ; out0             ;
+; |Hamming|sender:inst1|p7~1                                       ; |Hamming|sender:inst1|p7~1                                       ; out0             ;
+; |Hamming|sender:inst1|p7~2                                       ; |Hamming|sender:inst1|p7~2                                       ; out0             ;
+; |Hamming|sender:inst1|hamout[0]                                  ; |Hamming|sender:inst1|hamout[0]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[1]                                  ; |Hamming|sender:inst1|hamout[1]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[2]                                  ; |Hamming|sender:inst1|hamout[2]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[5]                                  ; |Hamming|sender:inst1|hamout[5]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[7]                                  ; |Hamming|sender:inst1|hamout[7]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[8]                                  ; |Hamming|sender:inst1|hamout[8]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[10]                                 ; |Hamming|sender:inst1|hamout[10]                                 ; regout           ;
+; |Hamming|receiver:inst|Decoder0~0                                ; |Hamming|receiver:inst|Decoder0~0                                ; out              ;
+; |Hamming|receiver:inst|Decoder0~5                                ; |Hamming|receiver:inst|Decoder0~5                                ; out              ;
+; |Hamming|receiver:inst|Decoder0~8                                ; |Hamming|receiver:inst|Decoder0~8                                ; out              ;
+; |Hamming|receiver:inst|Decoder0~9                                ; |Hamming|receiver:inst|Decoder0~9                                ; out              ;
+; |Hamming|receiver:inst|Decoder0~11                               ; |Hamming|receiver:inst|Decoder0~11                               ; out              ;
+; |Hamming|interupter:inst2|Add1~0                                 ; |Hamming|interupter:inst2|Add1~0                                 ; out0             ;
+; |Hamming|interupter:inst2|Add1~1                                 ; |Hamming|interupter:inst2|Add1~1                                 ; out0             ;
+; |Hamming|interupter:inst2|Add1~2                                 ; |Hamming|interupter:inst2|Add1~2                                 ; out0             ;
+; |Hamming|interupter:inst2|Add1~3                                 ; |Hamming|interupter:inst2|Add1~3                                 ; out0             ;
+; |Hamming|interupter:inst2|Add1~4                                 ; |Hamming|interupter:inst2|Add1~4                                 ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~0    ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~0    ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~9    ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~9    ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~22   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~22   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~24   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~24   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~26   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~26   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~31   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~31   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~33   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~33   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~35   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~35   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~49   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~49   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~51   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~51   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~58   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~58   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~60   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~60   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~72   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~72   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~74   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~74   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~76   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~76   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~81   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~81   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~83   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~83   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~85   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~85   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~99   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~99   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~101  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~101  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~108  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~108  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~110  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~110  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~121  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~121  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~123  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~123  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~125  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~125  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~130  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~130  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~132  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~132  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~134  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~134  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~140  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~140  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~141  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~141  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~2   ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~2   ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~4   ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~4   ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~11  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~11  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~13  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~13  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~22  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~22  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~24  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~24  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~26  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~26  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~31  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~31  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~33  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~33  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~35  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~35  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~47  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~47  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~51  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~51  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~56  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~56  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~60  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~60  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~72  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~72  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~74  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~74  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~76  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~76  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~81  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~81  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~83  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~83  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~85  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~85  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~97  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~97  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~101 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~101 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~106 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~106 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~110 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~110 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~121 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~121 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~123 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~123 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~125 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~125 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~130 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~130 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~132 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~132 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~134 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~134 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~140 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~140 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~141 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~141 ; out0             ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                               ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+; Node Name                                                        ; Output Port Name                                                 ; Output Port Type ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+; |Hamming|input[7]                                                ; |Hamming|input[7]                                                ; out              ;
+; |Hamming|input[6]                                                ; |Hamming|input[6]                                                ; out              ;
+; |Hamming|input[5]                                                ; |Hamming|input[5]                                                ; out              ;
+; |Hamming|input[4]                                                ; |Hamming|input[4]                                                ; out              ;
+; |Hamming|input[3]                                                ; |Hamming|input[3]                                                ; out              ;
+; |Hamming|input[2]                                                ; |Hamming|input[2]                                                ; out              ;
+; |Hamming|input[1]                                                ; |Hamming|input[1]                                                ; out              ;
+; |Hamming|input[0]                                                ; |Hamming|input[0]                                                ; out              ;
+; |Hamming|ReverseBitIndex[3]                                      ; |Hamming|ReverseBitIndex[3]                                      ; out              ;
+; |Hamming|ReverseBitIndex[2]                                      ; |Hamming|ReverseBitIndex[2]                                      ; out              ;
+; |Hamming|ReverseBitIndex[1]                                      ; |Hamming|ReverseBitIndex[1]                                      ; out              ;
+; |Hamming|ReverseBitIndex[0]                                      ; |Hamming|ReverseBitIndex[0]                                      ; out              ;
+; |Hamming|output[7]                                               ; |Hamming|output[7]                                               ; pin_out          ;
+; |Hamming|output[6]                                               ; |Hamming|output[6]                                               ; pin_out          ;
+; |Hamming|output[5]                                               ; |Hamming|output[5]                                               ; pin_out          ;
+; |Hamming|output[4]                                               ; |Hamming|output[4]                                               ; pin_out          ;
+; |Hamming|output[3]                                               ; |Hamming|output[3]                                               ; pin_out          ;
+; |Hamming|output[2]                                               ; |Hamming|output[2]                                               ; pin_out          ;
+; |Hamming|output[1]                                               ; |Hamming|output[1]                                               ; pin_out          ;
+; |Hamming|output[0]                                               ; |Hamming|output[0]                                               ; pin_out          ;
+; |Hamming|receiver:inst|output[1]                                 ; |Hamming|receiver:inst|output[1]                                 ; regout           ;
+; |Hamming|receiver:inst|pairity~4                                 ; |Hamming|receiver:inst|pairity~4                                 ; out              ;
+; |Hamming|receiver:inst|pairity~12                                ; |Hamming|receiver:inst|pairity~12                                ; out              ;
+; |Hamming|receiver:inst|pairity~13                                ; |Hamming|receiver:inst|pairity~13                                ; out              ;
+; |Hamming|receiver:inst|pairity~15                                ; |Hamming|receiver:inst|pairity~15                                ; out              ;
+; |Hamming|receiver:inst|pairity~17                                ; |Hamming|receiver:inst|pairity~17                                ; out              ;
+; |Hamming|receiver:inst|output[0]                                 ; |Hamming|receiver:inst|output[0]                                 ; regout           ;
+; |Hamming|receiver:inst|hamin~0                                   ; |Hamming|receiver:inst|hamin~0                                   ; out              ;
+; |Hamming|receiver:inst|hamin~2                                   ; |Hamming|receiver:inst|hamin~2                                   ; out              ;
+; |Hamming|receiver:inst|hamin~3                                   ; |Hamming|receiver:inst|hamin~3                                   ; out              ;
+; |Hamming|receiver:inst|hamin~6                                   ; |Hamming|receiver:inst|hamin~6                                   ; out              ;
+; |Hamming|receiver:inst|hamin~11                                  ; |Hamming|receiver:inst|hamin~11                                  ; out              ;
+; |Hamming|receiver:inst|hamin~12                                  ; |Hamming|receiver:inst|hamin~12                                  ; out              ;
+; |Hamming|receiver:inst|hamin~14                                  ; |Hamming|receiver:inst|hamin~14                                  ; out              ;
+; |Hamming|receiver:inst|hamin~15                                  ; |Hamming|receiver:inst|hamin~15                                  ; out              ;
+; |Hamming|receiver:inst|hamin~16                                  ; |Hamming|receiver:inst|hamin~16                                  ; out              ;
+; |Hamming|receiver:inst|hamin~18                                  ; |Hamming|receiver:inst|hamin~18                                  ; out              ;
+; |Hamming|receiver:inst|hamin~20                                  ; |Hamming|receiver:inst|hamin~20                                  ; out              ;
+; |Hamming|receiver:inst|hamin~23                                  ; |Hamming|receiver:inst|hamin~23                                  ; out              ;
+; |Hamming|receiver:inst|hamin~24                                  ; |Hamming|receiver:inst|hamin~24                                  ; out              ;
+; |Hamming|receiver:inst|hamin~26                                  ; |Hamming|receiver:inst|hamin~26                                  ; out              ;
+; |Hamming|receiver:inst|hamin~34                                  ; |Hamming|receiver:inst|hamin~34                                  ; out              ;
+; |Hamming|receiver:inst|pairity~22                                ; |Hamming|receiver:inst|pairity~22                                ; out              ;
+; |Hamming|receiver:inst|pairity~23                                ; |Hamming|receiver:inst|pairity~23                                ; out              ;
+; |Hamming|receiver:inst|hamin~36                                  ; |Hamming|receiver:inst|hamin~36                                  ; out              ;
+; |Hamming|receiver:inst|hamin~38                                  ; |Hamming|receiver:inst|hamin~38                                  ; out              ;
+; |Hamming|receiver:inst|hamin~46                                  ; |Hamming|receiver:inst|hamin~46                                  ; out              ;
+; |Hamming|receiver:inst|output~0                                  ; |Hamming|receiver:inst|output~0                                  ; out              ;
+; |Hamming|receiver:inst|output~1                                  ; |Hamming|receiver:inst|output~1                                  ; out              ;
+; |Hamming|receiver:inst|output~2                                  ; |Hamming|receiver:inst|output~2                                  ; out              ;
+; |Hamming|receiver:inst|output~3                                  ; |Hamming|receiver:inst|output~3                                  ; out              ;
+; |Hamming|receiver:inst|output~4                                  ; |Hamming|receiver:inst|output~4                                  ; out              ;
+; |Hamming|receiver:inst|output~5                                  ; |Hamming|receiver:inst|output~5                                  ; out              ;
+; |Hamming|receiver:inst|output~6                                  ; |Hamming|receiver:inst|output~6                                  ; out              ;
+; |Hamming|receiver:inst|output[2]                                 ; |Hamming|receiver:inst|output[2]                                 ; regout           ;
+; |Hamming|receiver:inst|output[3]                                 ; |Hamming|receiver:inst|output[3]                                 ; regout           ;
+; |Hamming|receiver:inst|output[4]                                 ; |Hamming|receiver:inst|output[4]                                 ; regout           ;
+; |Hamming|receiver:inst|output[5]                                 ; |Hamming|receiver:inst|output[5]                                 ; regout           ;
+; |Hamming|receiver:inst|output[6]                                 ; |Hamming|receiver:inst|output[6]                                 ; regout           ;
+; |Hamming|receiver:inst|output[7]                                 ; |Hamming|receiver:inst|output[7]                                 ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[0]               ; |Hamming|receiver:inst|\receiving_process:hamin[0]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[1]               ; |Hamming|receiver:inst|\receiving_process:hamin[1]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[3]               ; |Hamming|receiver:inst|\receiving_process:hamin[3]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[4]               ; |Hamming|receiver:inst|\receiving_process:hamin[4]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[5]               ; |Hamming|receiver:inst|\receiving_process:hamin[5]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[6]               ; |Hamming|receiver:inst|\receiving_process:hamin[6]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[7]               ; |Hamming|receiver:inst|\receiving_process:hamin[7]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[8]               ; |Hamming|receiver:inst|\receiving_process:hamin[8]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[9]               ; |Hamming|receiver:inst|\receiving_process:hamin[9]               ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[10]              ; |Hamming|receiver:inst|\receiving_process:hamin[10]              ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:hamin[11]              ; |Hamming|receiver:inst|\receiving_process:hamin[11]              ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:pairity[2]             ; |Hamming|receiver:inst|\receiving_process:pairity[2]             ; regout           ;
+; |Hamming|receiver:inst|\receiving_process:pairity[3]             ; |Hamming|receiver:inst|\receiving_process:pairity[3]             ; regout           ;
+; |Hamming|sender:inst1|p0~0                                       ; |Hamming|sender:inst1|p0~0                                       ; out0             ;
+; |Hamming|sender:inst1|p0~1                                       ; |Hamming|sender:inst1|p0~1                                       ; out0             ;
+; |Hamming|sender:inst1|p0~2                                       ; |Hamming|sender:inst1|p0~2                                       ; out0             ;
+; |Hamming|sender:inst1|p1~0                                       ; |Hamming|sender:inst1|p1~0                                       ; out0             ;
+; |Hamming|sender:inst1|p1~1                                       ; |Hamming|sender:inst1|p1~1                                       ; out0             ;
+; |Hamming|sender:inst1|p1~2                                       ; |Hamming|sender:inst1|p1~2                                       ; out0             ;
+; |Hamming|sender:inst1|p1~3                                       ; |Hamming|sender:inst1|p1~3                                       ; out0             ;
+; |Hamming|sender:inst1|p3~0                                       ; |Hamming|sender:inst1|p3~0                                       ; out0             ;
+; |Hamming|sender:inst1|p3~1                                       ; |Hamming|sender:inst1|p3~1                                       ; out0             ;
+; |Hamming|sender:inst1|p3~2                                       ; |Hamming|sender:inst1|p3~2                                       ; out0             ;
+; |Hamming|sender:inst1|p7~0                                       ; |Hamming|sender:inst1|p7~0                                       ; out0             ;
+; |Hamming|sender:inst1|p7~1                                       ; |Hamming|sender:inst1|p7~1                                       ; out0             ;
+; |Hamming|sender:inst1|p7~2                                       ; |Hamming|sender:inst1|p7~2                                       ; out0             ;
+; |Hamming|sender:inst1|hamout[0]                                  ; |Hamming|sender:inst1|hamout[0]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[1]                                  ; |Hamming|sender:inst1|hamout[1]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[2]                                  ; |Hamming|sender:inst1|hamout[2]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[3]                                  ; |Hamming|sender:inst1|hamout[3]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[4]                                  ; |Hamming|sender:inst1|hamout[4]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[5]                                  ; |Hamming|sender:inst1|hamout[5]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[6]                                  ; |Hamming|sender:inst1|hamout[6]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[7]                                  ; |Hamming|sender:inst1|hamout[7]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[8]                                  ; |Hamming|sender:inst1|hamout[8]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[9]                                  ; |Hamming|sender:inst1|hamout[9]                                  ; regout           ;
+; |Hamming|sender:inst1|hamout[10]                                 ; |Hamming|sender:inst1|hamout[10]                                 ; regout           ;
+; |Hamming|sender:inst1|hamout[11]                                 ; |Hamming|sender:inst1|hamout[11]                                 ; regout           ;
+; |Hamming|receiver:inst|Decoder0~0                                ; |Hamming|receiver:inst|Decoder0~0                                ; out              ;
+; |Hamming|receiver:inst|Decoder0~5                                ; |Hamming|receiver:inst|Decoder0~5                                ; out              ;
+; |Hamming|receiver:inst|Decoder0~8                                ; |Hamming|receiver:inst|Decoder0~8                                ; out              ;
+; |Hamming|receiver:inst|Decoder0~9                                ; |Hamming|receiver:inst|Decoder0~9                                ; out              ;
+; |Hamming|receiver:inst|Decoder0~11                               ; |Hamming|receiver:inst|Decoder0~11                               ; out              ;
+; |Hamming|interupter:inst2|Add1~0                                 ; |Hamming|interupter:inst2|Add1~0                                 ; out0             ;
+; |Hamming|interupter:inst2|Add1~1                                 ; |Hamming|interupter:inst2|Add1~1                                 ; out0             ;
+; |Hamming|interupter:inst2|Add1~2                                 ; |Hamming|interupter:inst2|Add1~2                                 ; out0             ;
+; |Hamming|interupter:inst2|Add1~3                                 ; |Hamming|interupter:inst2|Add1~3                                 ; out0             ;
+; |Hamming|interupter:inst2|Add1~4                                 ; |Hamming|interupter:inst2|Add1~4                                 ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~0    ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~0    ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~9    ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~9    ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~22   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~22   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~24   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~24   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~26   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~26   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~31   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~31   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~33   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~33   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~35   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~35   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~49   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~49   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~51   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~51   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~58   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~58   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~60   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~60   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~72   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~72   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~74   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~74   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~76   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~76   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~81   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~81   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~83   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~83   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~85   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~85   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~99   ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~99   ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~101  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~101  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~108  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~108  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~110  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~110  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~121  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~121  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~123  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~123  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~125  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~125  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~130  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~130  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~132  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~132  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~134  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~134  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~140  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~140  ; out0             ;
+; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~141  ; |Hamming|sender:inst1|lpm_mux:Mux0|mux_src:auto_generated|_~141  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~2   ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~2   ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~4   ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~4   ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~11  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~11  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~13  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~13  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~22  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~22  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~24  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~24  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~26  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~26  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~31  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~31  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~33  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~33  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~35  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~35  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~47  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~47  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~51  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~51  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~56  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~56  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~60  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~60  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~72  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~72  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~74  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~74  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~76  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~76  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~81  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~81  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~83  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~83  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~85  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~85  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~97  ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~97  ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~101 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~101 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~106 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~106 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~110 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~110 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~121 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~121 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~123 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~123 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~125 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~125 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~130 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~130 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~132 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~132 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~134 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~134 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~140 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~140 ; out0             ;
+; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~141 ; |Hamming|receiver:inst|lpm_mux:Mux0|mux_src:auto_generated|_~141 ; out0             ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Jun 14 18:11:31 2021
+Info: Command: quartus_sim --simulation_results_format=VWF Hamming -c Hamming_qsim
+Info (324025): Using vector source file "D:/altera/PSW2/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning (324036): Found clock-sensitive change during active clock edge at time 625.0 ns on register "|Hamming|sender:inst1|sent"
+Warning (324036): Found clock-sensitive change during active clock edge at time 625.0 ns on register "|Hamming|sender:inst1|\send_process:counter[0]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 625.0 ns on register "|Hamming|sender:inst1|\send_process:counter[2]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 625.0 ns on register "|Hamming|sender:inst1|\send_process:counter[3]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 825.0 ns on register "|Hamming|sender:inst1|data"
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      70.23 %
+Info (328052): Number of transitions in simulation is 6217
+Info (324045): Vector file Hamming_qsim.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4449 megabytes
+    Info: Processing ended: Mon Jun 14 18:11:32 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
